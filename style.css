@@ -1,0 +1,55 @@
+body{
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+h1,h3{
+    margin:auto;
+}
+
+#outer{
+    text-align:center;
+}
+
+#outer{
+    min-height: 110px;
+    margin: 0;
+    padding: 0;
+}
+
+#main_message{
+    border-radius: 15px;
+    color: white;
+    background-color: #666666;
+    padding: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reload{
+    background-color: #883333;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    margin-top: 0px;
+    border: none;
+}
+
+#reload:hover{
+    background-color: #885555;
+}
+
+a{
+    color: #885555;
+    /*color: #666666;*/
+    text-decoration:underline;
+}
+
+#header{
+    background-image:url('biohazard_red.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+}
