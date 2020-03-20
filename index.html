@@ -5,13 +5,24 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="warnings.js"></script>
 <script type="text/javascript">
-function reload(){
-    next_message = warnings[Math.floor(Math.random()*warnings.length)];
+function reload(first_time){
+    // Apparently URLSearchParams has ok-but-not-perfect browser support.
+    up = new URLSearchParams(window.location.search);
+    i = parseInt(up.get('i'));
+    if (isNaN(i) || i < 0 || i >= warnings.length || !first_time){
+        i = Math.floor(Math.random()*warnings.length);
+    }
+
+    next_message = warnings[i];
     document.getElementById("main_message").innerHTML = next_message;
+
+    new_url = window.location.origin + window.location.pathname + "?i=" + i;
+    document.getElementById("permalink").href = new_url;
+    window.history.replaceState({},"",new_url);
 }
 </script>
 </head>
-<body onload="reload()">
+<body onload="reload(true)">
     <div id="outer">
     <div>
     <div id="header">
@@ -23,11 +34,19 @@ function reload(){
     <b>In the event of a global pandemic, remember:</b>
     </p>
     <div id="outer">
-    <div id="main_message">This website requires JavaScript to function.</div>
+    <div id="main_message">This webapp requires JavaScript to function.</div>
     </div>
-    <button id="reload" onclick="reload()">More Advice</button>
-    <p>(For more information, check out 
-    <a href="https://github.com/averyhiebert/pandemic-advice">the github repo</a>)</p>
+    <button id="reload" onclick="reload(false)">More Advice</button>
+    <p> 
+        <a href="/?i=1" id="permalink">
+        Permalink to this advice.
+        </a>
+    </p>
+    <p>
+        (For more information, check out 
+        <a href="https://github.com/averyhiebert/pandemic-advice">
+        the github repo</a>)
+    </p>
     </div>
 </body>
 </html>
