@@ -1,6 +1,9 @@
-# Pandemic Advice from an AI
+# Questionable Pandemic Advice from an AI
 Just a simple website displaying some questionable public safety announcements
 generated using OpenAI's GPT-2.
+
+In case it wasn't clear, this advice is mostly bad and you shouldn't follow it.
+Also, I can't 100% guarantee that all of the advice is family-friendly.
 
 ## How was the advice generated?
 I generated the advice using the large GPT-2 model 
