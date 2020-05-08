@@ -1,6 +1,8 @@
 # Questionable Pandemic Advice from an AI
 Just a simple website displaying some questionable public safety announcements
-generated using OpenAI's GPT-2.
+generated using OpenAI's GPT-2.  View it
+[here](https://averyhiebert.github.io/pandemic-advice/), or read a blog post
+about it [here](https://noctes.mathematicae.ca/generating-questionable-pandemic-advice-with-gpt-2.html).
 
 In case it wasn't clear, this advice is mostly bad and you shouldn't follow it.
 Also, I can't 100% guarantee that all of the advice is family-friendly.
